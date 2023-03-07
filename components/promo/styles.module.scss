@@ -1,0 +1,120 @@
+@import './../../styles/vars';
+@import './../../styles/mixins';
+
+
+.promo {
+  //width: 690px;
+  height: 360px;
+  padding: 30px;
+  grid-area: c7;
+  position: relative;
+  background-image: url('./../../public/static/colleagues.webp');
+  background-size: 25%;
+  background-repeat: no-repeat;
+  background-position: 88% 56%;
+  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.08);
+  border-radius: $borderRadius;
+  overflow: hidden;
+  ///*   background: linear-gradient(#3E6AFF, #9F2DFF, #6334FF);
+  //  filter: blur(250px);
+  .bgPhone1 {
+    position: absolute;
+    width: 1000px;
+    height: 1000px;
+    left: -288px;
+    top: 0px;
+    border-radius: 50%;
+    //background: #6334FF;
+    background: radial-gradient(circle, rgba(99,52,255,0.7245491946778712) 0%, rgba(99,52,255,0) 100%);
+    opacity: 0.25;
+    filter: blur(25px);
+  }
+
+  .bgPhone2 {
+    position: absolute;
+    width: 702px;
+    height: 702px;
+    left: 400px;
+    top: 172px;
+
+    background: radial-gradient(circle, rgba(159,45,255,0.84) 0%, rgba(159,45,255,0) 100%);
+    opacity: 0.25;
+    filter: blur(25px);
+  }
+
+  //.bgPhone3 {
+  //  position: absolute;
+  //  width: 352px;
+  //  height: 352px;
+  //  left: -255px;
+  //  top: 331px;
+  //  background: #6334FF;
+  //  opacity: 0.45;
+  //  filter: blur(162px);
+  //}
+  .promoTitle{
+    max-width: 253px;
+    margin: 0 0 20px 0;
+    @include textEdit(24px, 800, 33px);
+  }
+  .promoText{
+    margin: 0 0 10px 0;
+    max-width: 300px;
+    @include textEdit(16px, 400, 22px);
+  }
+  .promoDescr{
+    @include textEdit(14px, 500, 19px);
+    opacity: 0.5;
+  }
+  .social{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+
+
+
+
+    .socialLink {
+        cursor: pointer;
+      .linkInner {
+        width: 330px;
+        //height: 52px;
+        padding: 0px 10px 0px 0px;
+
+        @include textEdit(16px, 600, 22px, $mainColor);
+
+        .linkIcon {
+          fill: $mainColor;
+        }
+
+        .linkText {
+          margin-left: 15px;
+        }
+
+        &:active {
+          opacity: .7;
+        }
+
+        @media screen and (max-width: 430px) {
+          width: 100%;
+
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 720px) {
+    background-image: none;
+    width: 100%;
+    height: 390px;
+  }
+  @media screen and (max-width: 360px) {
+    background-image: none;
+    width: 100%;
+    height: 420px;
+  }
+
+}
+

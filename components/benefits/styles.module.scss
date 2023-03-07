@@ -1,0 +1,93 @@
+@import './../../styles/vars';
+@import './../../styles/mixins';
+
+.benefits {
+  background-color: $whiteColor;
+
+  .benefitsTitle{
+    margin-top: 166px;
+
+    @media screen and (max-width: 430px) {
+      margin-top: 295px;
+    }
+  }
+  .inner {
+    padding: 20px 0 25px;
+
+    display: grid;
+    grid-template-areas:
+          'c1 c1 c2 c2 c3 c3'
+          'c4 c4 c4 c5 c5 c5';
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+
+
+    .card {
+      height: 248px;
+      padding: 30px 15px 52px 30px;
+      background-color: $whiteColor;
+      box-shadow: 0px 70px 70px rgba(0, 0, 0, 0.1);
+      border-radius: $borderRadius;
+
+      .cardTitle {
+        padding: 0;
+        margin: 10px 0 0;
+        @include textEdit(24px, 800, 33px);
+        background: linear-gradient(315deg, #0038FF 0%, #0083FF 51.04%, #00D1FF 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .cardText {
+        padding-right: 7px;
+        max-width: 410px;
+        margin-top: 10px;
+        @include textEdit(16px, 500, 22px);
+        opacity: 0.5;
+      }
+      &:nth-child(1) {
+        grid-area: c1;
+      }
+      &:nth-child(2) {
+        grid-area: c2;
+      }
+      &:nth-child(3) {
+        grid-area: c3;
+      }
+      &:nth-child(4) {
+        grid-area: c4;
+      }
+      &:nth-child(5) {
+        grid-area: c5;
+      }
+
+      //&:nth-child(4) {
+      //  width: 690px;
+      //}
+
+      @media screen and (max-width: 1200px) {
+        width: 100%;
+        height: auto;
+        padding: 30px 15px 15px 30px;
+      }
+
+
+      @media screen and (max-width: 430px) {
+        padding-right: 0;
+        height: 100%;
+      }
+
+    }
+
+    @media screen and (max-width: 767px) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    @media screen and (max-width: 430px) {
+      padding: 20px 20px 140px;
+    }
+  }
+}

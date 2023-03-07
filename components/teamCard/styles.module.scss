@@ -1,0 +1,77 @@
+@import './../../styles/vars';
+@import './../../styles/mixins';
+
+.card {
+  padding: 20px 20px 8px;
+  width: 100%;
+  height: auto;
+  background-color: $whiteColor;
+  border: 1px solid rgba(23, 24, 28, 0.12);
+  border-radius: $borderRadius;
+  text-align: center;
+
+  img {
+    width: 120px;
+    margin: 0 auto;
+    height: 120px;
+    border-radius: 50%;
+  }
+
+  .cardTitle {
+
+    //margin-top: 20px;
+    @include textEdit(18px, 800, 25px);
+  }
+
+  .cardDescr {
+    max-width: 200px;
+    margin: 6px auto 0;
+    @include textEdit(16px, 500, 22px);
+  }
+
+  .cardText {
+    margin-top: 30px;
+    @include textEdit(14px, 500, 19px);
+    opacity: 0.5;
+  }
+
+  &:nth-child(1) {
+    grid-area: c1;
+  }
+
+  &:nth-child(2) {
+    grid-area: c2;
+  }
+
+  &:nth-child(3) {
+    grid-area: c3;
+  }
+
+  &:nth-child(4) {
+    grid-area: c4;
+  }
+
+  &:nth-child(5) {
+    grid-area: c5;
+  }
+
+  &:nth-child(6) {
+    grid-area: c6;
+  }
+
+  blockquote {
+    width: 100%;
+    margin: 12px 0 auto;
+    text-align: center;
+    @include textEdit(16px, 500, 22px);
+    color: #17181C;
+    opacity: 0.5;
+  }
+
+  @media screen and (max-width: 430px) {
+    height: 400px;
+  }
+
+}
+
+

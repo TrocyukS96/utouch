@@ -1,0 +1,13 @@
+@import 'vars.scss';
+@mixin flexEdit ($justifyContent,$alignItems){
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+
+@mixin textEdit ($fontSize,$fontWeight,$lineHeight,$txtColor:$textColor){
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  line-height:$lineHeight ;
+  color:$txtColor;
+}

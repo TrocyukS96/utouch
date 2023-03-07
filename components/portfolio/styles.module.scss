@@ -1,0 +1,201 @@
+@import './../../styles/vars';
+@import './../../styles/mixins';
+
+.portfolio {
+
+  .inner {
+    padding: 28px 0 62px;
+    text-align: center;
+
+    .portfolioTitle {
+      text-align: left;
+
+      @media screen and (max-width: 430px) {
+        text-align: center;
+      }
+    }
+
+    .cards {
+      margin: 20px 0 0px;
+
+      display: grid;
+      grid-template-areas:
+          'c1 c1 c2 c2 c2'
+          'c3 c3 c3 c4 c4'
+          'c5 c5 c5 c5 c5';
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: 441px 690px 330px;
+      gap: 30px;
+
+
+      .portfolioCard {
+        height: 100%;
+        @include flexEdit(space-between, flex-start);
+        flex-direction: column;
+        border-radius: $borderRadius;
+        text-align: left;
+        transition: $transition;
+        color: $whiteColor;
+
+        .content {
+          .cardTitle {
+            padding: 0;
+            margin: 0;
+            @include textEdit(24px, 800, 33px, $whiteColor);
+          }
+
+          .cardText {
+            margin: 6px 0 0;
+            @include textEdit(14px, 500, 19px, $whiteColor);
+          }
+
+        }
+
+        &:nth-child(1) {
+          grid-area: c1;
+        }
+
+        &:nth-child(2) {
+          grid-area: c2;
+        }
+
+        &:nth-child(3) {
+          grid-area: c3;
+        }
+
+        &:nth-child(4) {
+          grid-area: c4;
+        }
+
+        &:nth-child(5) {
+          grid-area: c5;
+        }
+        @media screen and (max-width: 767px) {
+          width: 100%;
+          height: 500px;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      @media screen and (max-width: 430px) {
+        display: none;
+      }
+
+
+    }
+
+    //.portfolioBottomLink {
+    //  margin-top: 52px;
+    //  display: inline-flex;
+    //
+    //  @media screen and (max-width: 430px) {
+    //    display: none;
+    //  }
+    //}
+
+    @media screen and (max-width: 720px) {
+      padding: 140px 30px 20px;
+    }
+  }
+}
+
+
+.portfolioLink {
+  @include flexEdit(flex-start,center);
+  gap: 6px;
+  @include textEdit(16px,600,22px,$whiteColor);
+
+  &:active{
+    color:$mainActive;
+  }
+
+}
+
+.cardsSlider {
+  display: none;
+  text-align: center;
+  .portfolioSwiper{
+    padding: 0;
+    padding-top: 30px;
+  }
+
+  @media screen and(max-width: 430px) {
+    display: block;
+  }
+
+  //margin: 0 30px;
+
+  .portfolioSliderLink {
+    margin: 72px 0 0;
+    display: inline-flex;
+
+    @media screen and (max-width: 430px) {
+      margin: 60px 0 90px
+    }
+  }
+
+  .portfolioSlider {
+    padding: 0;
+    height: 580px;
+
+    .swiper-wrapper {
+      height: 500px;
+    }
+
+    .portfolioSlide {
+      //height: 900px;
+      width: 200px;
+      border: 2px solid;
+      background-color: transparent;
+    }
+  }
+}
+
+.styles_cardsSlider__Qe6Ar .swiper-wrapper {
+  height: 480px;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: var(--swiper-pagination-bullet-opacity, 1);
+  background: var(--swiper-pagination-color, var(--swiper-theme-color));
+}
+
+.portfolioMobCard {
+  height: 470px;
+  background-color: transparent;
+  //padding: 30px;
+  //background: linear-gradient(45deg, #6a85b6, #bac8e0);
+  @include flexEdit(space-between, flex-start);
+  flex-direction: column;
+  border-radius: $borderRadius;
+  text-align: center;
+
+  .content {
+    text-align: left;
+
+    .cardTitle {
+      padding: 0;
+      margin: 0;
+      @include textEdit(24px, 800, 33px, $whiteColor);
+    }
+
+    .cardText {
+      margin: 6px 0 0;
+      @include textEdit(14px, 500, 19px, $whiteColor);
+    }
+  }
+
+  .portfolioLink {
+    display: inline-flex;
+    align-self: center;
+  }
+}
+
+
+
+

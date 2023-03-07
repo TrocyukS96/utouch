@@ -1,0 +1,13 @@
+@import '../../styles/vars';
+@import '../../styles/mixins';
+
+.link{
+    @include flexEdit(flex-start,center);
+    gap: 6px;
+    @include textEdit(16px,600,22px,$mainColor);
+    cursor: pointer;
+    &:active{
+        color:$mainActive;
+    }
+
+}

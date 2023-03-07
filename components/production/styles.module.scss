@@ -1,0 +1,108 @@
+@import './../../styles/vars';
+@import './../../styles/mixins';
+
+.production {
+  background-color: #F0F8FF;
+
+  .inner {
+    max-height: 420px;
+    padding: 60px 0 98px;
+    @include flexEdit(flex-start, flex-start);
+    gap: 30px;
+
+
+    .top {
+      max-width: 570px;
+
+      .title {
+        margin-top: 20px;
+        @include textEdit(40px, 800, 55px, $textColor);
+        
+        @media screen and (max-width: 430px) {
+          @include textEdit(29px, 800, 44px);
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .card {
+      width: 402px;
+      padding: 30px;
+      background-color: $whiteColor;
+      border-radius: $borderRadius;
+      box-shadow: 0px 70px 70px rgba(0, 0, 0, 0.1);
+
+      .iconWrap{
+        width: 80px;
+        height: 80px;
+        @include flexEdit(center,center);
+        background: linear-gradient(315deg, #0038FF 0%, #0083FF 51.04%, #00D1FF 100%);
+        border-radius: 50%;
+        svg{
+          transition: $transition;
+          fill: $whiteColor;
+        }
+        &:hover svg{
+          fill:$textColor;
+        }
+
+      }
+      .mobile{
+        background: linear-gradient(315deg, #FF3D00 0.01%, #FF9900 51.56%, #FFC700 100%);
+      }
+
+      .cardTitle {
+        margin: 26px 0 0 0;
+        @include textEdit(24px, 800, 33px, $textColor);
+      }
+
+      .cardContent {
+        max-width: 245px;
+        padding: 0;
+        margin-top: 26px;
+        @include flexEdit(flex-start, flex-start);
+        flex-direction: column;
+        gap: 10px;
+        list-style: none;
+
+        .cardItem {
+          @include textEdit(16px, 500, 22px, $textColor);
+          opacity: 0.5;
+        }
+      }
+      .cardPrice{
+        @include textEdit(16px, 500, 22px, $textColor);
+        color:#808080a3;
+
+        .web, .mobile{
+          @include textEdit(24px, 800px, 33px);
+        }
+        .web{
+          background: linear-gradient(315deg, #0038FF 0%, #0083FF 51.04%, #00D1FF 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        .mobile {
+          background: linear-gradient(315deg, #FF3D00 0.01%, #FF9900 51.56%, #FFC700 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+
+
+      }
+      @media screen and (max-width: 430px) {
+        width: 100%;
+      }
+    }
+
+    @media screen and (max-width: 1200px){
+      max-height: 100%;
+      flex-direction: column;
+    }
+    @media screen and (max-width: 430px) {
+      max-height: 1080px;
+      padding: 60px 20px 98px;
+    }
+  }
+}

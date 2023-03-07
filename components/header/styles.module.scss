@@ -1,0 +1,227 @@
+@import './../../styles/vars';
+@import './../../styles/mixins';
+
+.header {
+  max-width: 1700px;
+  padding: 0px 30px;
+  margin: 0 auto;
+
+  @include flexEdit(space-between, center);
+
+  .leftPart {
+    @include flexEdit(flex-start, center);
+    gap: 45px;
+
+    .logo {
+      @include flexEdit(flex-start, center);
+      gap: 10px;
+      cursor: pointer;
+
+      .logoImg {
+        width: 32px;
+        height: 32px;
+      }
+
+      .logoTxt {
+        width: 96.25px;
+        height: 23.27px;
+      }
+    }
+
+
+
+    @media screen and (max-width: 430px){
+      gap: 25px;
+    }
+
+  }
+
+  .menuButton {
+    width: 28px;
+    height: 22px;
+    overflow: hidden;
+    position: relative;
+    display: none;
+
+
+    img {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 1240px) {
+      display: block;
+    }
+  }
+
+  .rightPart {
+    @include flexEdit(flex-start, center);
+    //gap: 38px;
+
+    transition: $transition;
+
+
+    @media screen and (max-width: 1240px) {
+      visibility: hidden;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      flex-direction: column;
+      gap: 15px;
+      background-color: $whiteColor;
+      transform: translateX(100%);
+    }
+
+    .nav {
+      @include flexEdit(flex-start, center);
+      gap: 15px;
+      list-style: none;
+
+      a {
+        cursor: pointer;
+      }
+
+      .navItem {
+        padding: 13px 27px;
+        @include textEdit(16px, 600, 22px);
+        border-radius: $borderRadius;
+        transition: $transition;
+
+        &:hover {
+          background-color: $mainColor;
+          color: $whiteColor;
+
+        }
+      }
+
+      @media screen and (max-width: 1400px) {
+        gap: 5px;
+      }
+      @media screen and (max-width: 1240px) {
+        margin: 20px 0 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+
+    //.dropdown {
+    //  @media screen and (max-width: 1240px) {
+    //    margin-top: 25px;
+    //    text-align: center;
+    //  }
+    //
+    //  .select {
+    //    padding: 6px;
+    //  }
+    //}
+
+    .cancelBtn {
+      @include textEdit(20px, 600, 16px);
+      border-style: none;
+      background-color: transparent;
+      color: $textColor;
+      display: none;
+
+      @media screen and (max-width: 1240px) {
+        display: block;
+
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+    }
+    .socialLinks{
+      display: none;
+      @media screen and (max-width: 430px) {
+        display: flex;
+        gap: 24px;
+        margin: 11px 0 0;
+      }
+    }
+  }
+  @media screen and (max-width: 1240px) {
+    height: 75px;
+  }
+
+  @media screen and (max-width: 430px) {
+    padding: 0px 30px;
+  }
+  @media screen and (max-width: 340px) {
+    padding: 0px 20px;
+  }
+
+}
+
+
+.select {
+  border-style: none;
+
+  &::before {
+    border-color: transparent;
+  }
+
+  &::after {
+    border-color: transparent;
+  }
+}
+
+.selectItem {
+  @include flexEdit(flex-start, center);
+}
+
+.selectItemBlock {
+  @include flexEdit(flex-start, flex-end);
+  gap: 5px;
+  color: $textColor;
+
+
+  span {
+    @include textEdit(14px, 800, 19px);
+  }
+}
+
+
+.socialLinks {
+  @include flexEdit(flex-start, center);
+  gap: 10px;
+
+  a {
+    width: 34px;
+    height: 34px;
+    .iconBlock{
+      width: 100%;
+      height: 100%;
+      @include flexEdit(center,center);
+      background: $whiteColor;
+      border-radius: 50%;
+      transition:$transition;
+      border: 1px solid rgba(23, 24, 28, 0.12);;
+      &:hover{
+        background: $textColor;
+      }
+      &:hover svg{
+        fill:$whiteColor;
+      }
+      .vkIcon{
+        width: 18px;
+        height: 10.5px;
+        fill:$textColor;
+        transition:$transition;
+      }
+      .tgIcon{
+        width: 16px;
+        height: 14px;
+      }
+    }
+  }
+  @media screen and (max-width: 430px) {
+    display: none;
+  }
+
+}
+

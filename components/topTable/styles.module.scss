@@ -1,0 +1,14 @@
+@import '../../styles/vars';
+@import '../../styles/mixins';
+
+.table{
+  @include textEdit(32px,700,44px,$mainColor);
+
+  @media screen and (max-width:720px) {
+
+    @include textEdit(20px,700,27px,$mainColor);
+    text-align: center;
+
+  }
+
+}

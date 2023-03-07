@@ -1,0 +1,88 @@
+@import './../../styles/vars';
+@import './../../styles/mixins';
+
+.team {
+
+  .inner {
+    margin-bottom: 100px;
+
+    .text {
+      max-width: 850px;
+      margin: 20px 0 0;
+      @include textEdit(20px, 400, 27px);
+
+      @media screen and (max-width: 430px) {
+       font-size: 16px;
+      }
+    }
+
+    .cards {
+      margin-top: 50px;
+
+      display: grid;
+      grid-template-areas:
+    'c1 c2 c3 c4'
+    'c5 c7 c7 c7';
+
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr 1fr;
+      column-gap: 50px;
+      row-gap: 30px;
+
+      @media screen and (max-width: 720px) {
+        display: flex;
+        flex-wrap: wrap;
+        grid-gap: 30px;
+        gap: 30px;
+      }
+
+      @media screen and (max-width: 430px) {
+        display: none;
+      }
+      .cardsPromo{
+        @media screen and (max-width: 430px) {
+          display: block;
+        }
+      }
+    }
+
+
+    @media screen and (max-width: 430px) {
+      padding: 0 20px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.cardsSlider{
+  display: none;
+  margin-top: 30px;
+  //margin-bottom: 35px;
+
+  .teamSwiper{
+    padding: 0;
+  }
+
+  .slick-track{
+    padding-top: 20px;
+  }
+
+  @media screen and (max-width: 430px) {
+    display: block;
+  }
+}
+
+.mobilePromo{
+  display: none;
+  margin: 0 30px;
+
+  @media screen and (max-width: 430px) {
+    margin-top: 60px;
+    display: block;
+  }
+
+}
+
+
+
+

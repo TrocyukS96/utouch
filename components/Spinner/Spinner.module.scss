@@ -1,0 +1,16 @@
+.wrapper {
+  width: 110%;
+  height: 110%;
+  top: -5%;
+  left: -5%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blur {
+  backdrop-filter: blur(3px);
+  z-index: 1000;
+  transition: 0.3s ease-in-out;
+}

@@ -1,0 +1,167 @@
+@import './../styles/mixins';
+@import './../styles/vars';
+
+.wrapper {
+  overflow: hidden;
+  font-family: 'Manrope';
+}
+
+.overflowHidden {
+  overflow-y: hidden;
+}
+
+//  .header {
+//    max-width: 1700px;
+//    padding:14px 10px;
+//    margin: 0 auto;
+//
+//    @include flexEdit(space-between,center);
+//    .leftPart {
+//      @include flexEdit(flex-start,center);
+//      gap:45px;
+//      .logo {
+//        @include flexEdit(flex-start, center);
+//        gap: 10px;
+//
+//        .logoImg {
+//          width: 32px;
+//          height: 32px;
+//        }
+//
+//        .logoTxt {
+//          width: 96.25px;
+//          height: 23.27px;
+//        }
+//      }
+//
+//      .socialLinks {
+//        @include flexEdit(flex-start, center);
+//        gap: 10px;
+//
+//        a{
+//          width: 34px;
+//          height: 34px;
+//        }
+//      }
+//
+//    }
+//    .menuButton{
+//      width: 28px;
+//      height: 22px;
+//      overflow: hidden;
+//      position: relative;
+//      display: none;
+//
+//      @media screen and (max-width: 1240px) {
+//        display: block;
+//      }
+//
+//      & span,&::before,&::after{
+//        height: 3px;
+//        width: 100%;
+//        position: absolute;
+//        background: #515758;
+//        margin: 0 auto;
+//        color:$textColor;
+//      }
+//      & span{
+//        top: 21px;
+//      }
+//      &::after,&::before{
+//        content: '';
+//      }
+//      &::after{
+//        bottom: 6px;
+//      }
+//      &::before{
+//        top: 5px;
+//      }
+//    }
+//    .rightPart{
+//      @include flexEdit(flex-start,center);
+//      gap: 38px;
+//
+//      transition: $transition;
+//
+//
+//      @media screen and (max-width: 1240px) {
+//        visibility: hidden;
+//        position: fixed;
+//        top: 0;
+//        bottom: 0;
+//        left: 0;
+//        right: 0;
+//        z-index: 100;
+//        flex-direction: column;
+//        gap: 15px;
+//        background-color: $whiteColor;
+//        transform: translateX(100%);
+//      }
+//      .nav{
+//        @include flexEdit(flex-start,center);
+//        gap:45px;
+//        list-style: none;
+//        .navItem{
+//          padding:13px 27px;
+//          @include textEdit(16px,600,22px);
+//          border-radius: $borderRadius;
+//          transition: $transition;
+//
+//          &:hover{
+//            background-color: $mainColor;
+//            color:$whiteColor;
+//
+//          }
+//        }
+//        @media screen and (max-width: 1400px) {
+//          gap: 5px;
+//        }
+//        @media screen and (max-width: 1240px) {
+//          margin: 20px 0 0;
+//          padding: 0;
+//          flex-direction: column;
+//          justify-content: flex-start;
+//          align-items: center;
+//          gap: 10px;
+//        }
+//      }
+//      .dropdown{
+//        @media screen and (max-width: 1240px) {
+//          margin-top: 25px;
+//          text-align: center;
+//        }
+//        .select{
+//          padding: 6px;
+//        }
+//      }
+//      .cancelBtn{
+//        @include textEdit(20px,600,16px);
+//        border-style: none;
+//        background-color: transparent;
+//        color:$textColor;
+//        display: none;
+//
+//        @media screen and (max-width: 1240px) {
+//           display: block;
+//
+//          position: absolute;
+//          top: 10px;
+//          right: 10px;
+//        }
+//      }
+//
+//
+//    }
+//    @media screen and (max-width: 430px){
+//      padding: 18px 30px;
+//    }
+//  }
+//}
+
+
+
+
+  root.css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(0, 0, 0, 0.23);
+  }
+
